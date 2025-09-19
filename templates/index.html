@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Welcome to Online Shop</h1>
+
+    <div class="row">
+        {% for product in products %}
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="{{ product.thumbnail.url }}" class="card-img-top" alt="{{ product.name }}" height="300px">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">{{ product.body }}</p>
+              <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

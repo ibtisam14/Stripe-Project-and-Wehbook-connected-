@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block body %}
+<h1>Payment Successfull</h1>
+<a href="{% url 'core:index' %}" role="button" class="btn btn-outline-primary">Go to Home page</a>
+    
+{% endblock %}
