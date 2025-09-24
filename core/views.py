@@ -55,8 +55,9 @@ def stripe_checkout_session(request, pk):
         ],
         mode="payment",
         customer_creation='always',
-        success_url="https://864tlzrs-8000.inc1.devtunnels.ms/success/?session_id={CHECKOUT_SESSION_ID}",
+        success_url=settings.PAYMENT_SUCCESS_URL,  # ✅ FIXED
         cancel_url=settings.PAYMENT_CANCEL_URL,
+
           
     )
 

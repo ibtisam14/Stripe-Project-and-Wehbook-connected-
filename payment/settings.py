@@ -134,5 +134,6 @@ STRIPE_WEBHOOK_SECRET = str(os.getenv("STRIPE_WEBHOOK_SECRET_KEY"))
 
 
 REDIRECT_DOMAIN = 'http://127.0.0.1:8000'
-PAYMENT_SUCCESS_URL='http://127.0.0.1:8000/success/'
-PAYMENT_CANCEL_URL='http://127.0.0.1:8000/cancel/'
+PAYMENT_SUCCESS_URL = os.getenv("SUCCESS_URL", "http://127.0.0.1:8000/success/")
+PAYMENT_CANCEL_URL = os.getenv("CANCEL_URL", "http://127.0.0.1:8000/cancel/")
+
