@@ -26,8 +26,12 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "0bbd22de4626.ngrok-free.app",
+    "4d8a52b69bc6.ngrok-free.app"
+]
 
 # Application definition
 
@@ -126,7 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_PUBLIC_KEY = str(os.getenv("STRIPE_PUBLIC_KEY","pk_test_51S8buuIVBvgAiYiDqx3uY6RMMHZylgN4wFJA9tHRQwqKNaysSRm4hw47ej9kgk6KtohhkRtKihqss72TEOUmfquG00XpfaGuKj"))
 STRIPE_PRIVATE_KEY = str(os.getenv("STRIPE_PRIVATE_KEY","sk_test_51S8buuIVBvgAiYiD6QAONKWJ6hNYbWQeh2JeLx0ItoRzx2NuqXW0ryVitmeQaF9vF6qsQ8zroxRolMxLN6KK8f7U000D4W6nL2"))
-STRIPE_WEBHOOK_SECRET_KEY = str(os.getenv("STRIPE_WEBHOOK_SECRET_KEY"))
+STRIPE_WEBHOOK_SECRET = str(os.getenv("STRIPE_WEBHOOK_SECRET_KEY","whsec_5kBs0ye1TqpLKGB752ADGariMt8ztKAD"))
 
 REDIRECT_DOMAIN = 'http://127.0.0.1:8000'
 PAYMENT_SUCCESS_URL='http://127.0.0.1:8000/success/'
