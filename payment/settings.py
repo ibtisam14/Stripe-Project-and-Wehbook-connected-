@@ -128,9 +128,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STRIPE_PUBLIC_KEY = str(os.getenv("STRIPE_PUBLIC_KEY","pk_test_51S8buuIVBvgAiYiDqx3uY6RMMHZylgN4wFJA9tHRQwqKNaysSRm4hw47ej9kgk6KtohhkRtKihqss72TEOUmfquG00XpfaGuKj"))
-STRIPE_PRIVATE_KEY = str(os.getenv("STRIPE_PRIVATE_KEY","sk_test_51S8buuIVBvgAiYiD6QAONKWJ6hNYbWQeh2JeLx0ItoRzx2NuqXW0ryVitmeQaF9vF6qsQ8zroxRolMxLN6KK8f7U000D4W6nL2"))
-STRIPE_WEBHOOK_SECRET = str(os.getenv("STRIPE_WEBHOOK_SECRET_KEY","whsec_5kBs0ye1TqpLKGB752ADGariMt8ztKAD"))
+STRIPE_PUBLIC_KEY = str(os.getenv("STRIPE_PUBLIC_KEY"))
+STRIPE_PRIVATE_KEY = str(os.getenv("STRIPE_PRIVATE_KEY"))
+STRIPE_WEBHOOK_SECRET = str(os.getenv("STRIPE_WEBHOOK_SECRET_KEY"))
+
 
 REDIRECT_DOMAIN = 'http://127.0.0.1:8000'
 PAYMENT_SUCCESS_URL='http://127.0.0.1:8000/success/'
